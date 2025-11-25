@@ -33,7 +33,7 @@ classdef OpEnOptimizer < handle
         
         function connect(o)
             o.udp_connection = udp(o.ip, o.port, ...
-                'InputBufferSize', 16384, 'OutputBufferSize', 8192);
+                'InputBufferSize', 65536, 'OutputBufferSize', 65536);
             fopen(o.udp_connection);
         end
         

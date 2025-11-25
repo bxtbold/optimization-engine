@@ -40,7 +40,7 @@ classdef OpEnOptimizerBuilder < handle
             
             o.optimization_engine_path = optimization_engine_root_path;
             o.icasadi_path = fullfile(optimization_engine_root_path, 'icasadi');
-            o.communication_buffer_size = 256;
+            o.communication_buffer_size = 65536;
         end
         
         opEnOptimizer = build(o);
